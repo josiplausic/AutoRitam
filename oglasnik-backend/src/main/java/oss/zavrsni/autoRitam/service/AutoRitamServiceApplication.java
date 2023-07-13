@@ -1,13 +1,13 @@
-package oss.zavrsni.oglasnikbackend;
+package oss.zavrsni.autoRitam.service;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OglasnikBackendApplication {
+public class AutoRitamServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(OglasnikBackendApplication.class, args);
+		SpringApplication.run(AutoRitamServiceApplication.class, args);
 	}
 
 }
