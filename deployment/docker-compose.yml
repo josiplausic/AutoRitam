@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15.3
+    restart: always
+    container_name: postgresDB
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: autoRitamDB
+      POSTGRES_USER: autoRitam
+      POSTGRES_PASSWORD: autoRitam
+    ports:
+      - "5432:5432"
+    networks:
+      - auto_ritam_net
+
+volumes:
+  postgres_data:
+    name: postgres_data
+    driver: local
+
+networks:
+  auto_ritam_net:
+    name: auto_ritam_net
+    driver: bridge
